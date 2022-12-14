@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="527.0" prefWidth="571.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <VBox prefHeight="600.0" prefWidth="800.0" spacing="10">
+         <children>
+            <Label prefHeight="39.0" prefWidth="107.0" text="Build Graph:" />
+            <Button fx:id="btnBuildGraph" mnemonicParsing="false" onAction="#buildGraph" prefHeight="25.0" prefWidth="180.0" text="Build Graph" />
+            <Button fx:id="btnCalculateDisjointSet" mnemonicParsing="false" onAction="#computeDisjointSets" prefHeight="25.0" prefWidth="182.0" text="Calculate DisjointSets" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Similarity score" onAction="#computeTFIDF"/>
+            <Label text="Enter title of the first page:" />
+            <TextField fx:id="txtFirstPage" />
+            <Label text="Enter title of the second page:" />
+            <TextField fx:id="txtSecondPage" />
+            <Button mnemonicParsing="false" onAction="#findPath" prefHeight="25.0" prefWidth="425.0" text="Compute the shortest (weighted by distance (inverse similarity) metric) path" />
+            <TextArea fx:id="txtOutput" prefHeight="255.0" prefWidth="444.0" />
+         </children>
+      </VBox>
+   </children>
+</GridPane>
